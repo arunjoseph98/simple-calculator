@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html> 
+
+<head> 
+	<title>HTML Calculator</title> 
+
+	<style> 
+		* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  .calculator {
+    background-color: black;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+    border: solid 1px #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    margin-top: 40px;
+  }
+  
+  #result{
+     background-color: yellowgreen;
+     text-align: right;
+      width: 100%;
+      padding: 10px;
+      font-size: 24px;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3) inset;
+      border-radius: 5px;
+  }
+  
+  .buttons{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 10px;
+      margin-top: 20px;
+  }
+  
+  button{
+      padding: 10px;
+      font-size: 24px;
+      border: none;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+  }
+  
+  button:hover{
+      background-color: #ddd;
+  }
+  
+  .clear{
+      background-color: #ff4136;
+      color: #fff;
+  }
+  
+  .number, .decimal{
+      background-color: #fff;
+      color: #333;
+  
+  }
+  
+  .operator{
+      background-color: #0074d9;
+      color: #fff;
+  }
+  
+  .equals{
+      background-color: #01ff70;
+      grid-row: span 2;
+      color: #fff;
+  }
+
+	</style> 
+</head> 
+
+<body> 
+
+	<div class="calculator">
+        <input type="text" id="result"  placeholder="0" readonly>
+        <div class="buttons">
+            <button onclick="displayClear()"  class="clear">C</button>
+            <button onclick="backsp()" class="operator">&#9003</button>
+            <button onclick="displayVal('/')" class="operator">/</button>
+            <button onclick="displayVal('*')" class="operator">*</button>
+            
+
+            <button onclick="displayVal('7')" class="number">7</button>
+            <button onclick="displayVal('8')" class="number">8</button>
+            <button onclick="displayVal('9')" class="number">9</button>
+            <button onclick="displayVal('-')" class="operator">-</button>
+            
+            <button onclick="displayVal('4')" class="number">4</button>
+            <button onclick="displayVal('5')" class="number">5</button>
+            <button onclick="displayVal('6')" class="number">6</button>
+            <button onclick="displayVal('+')" class="operator">+</button>
+            
+            
+            <button onclick="displayVal('1')" class="number">1</button>
+            <button onclick="displayVal('2')" class="number">2</button>
+            <button onclick="displayVal('3')" class="number">3</button>
+            <button onclick="cal()" class="equals">=</button>
+            <button onclick="displayVal('0')" class="number">0</button>
+            <button onclick="displayVal('00')" class="number">00</button>
+            <button onclick="displayVal('.')" class="number">.</button>
+
+        </div>
+    </div>
+</body> 
+<script src="./cal.js"></script>
+</html> 
